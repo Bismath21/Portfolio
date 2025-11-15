@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biswajit Modak - Data Scientist | IIT Madras GUVI Graduate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 3D Background -->
+    <div id="three-container"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero particle-bg">
+        <div class="hero-content">
+            <div class="hero-text slide-in-left">
+                <h1 class="hero-title glow-text">
+                    <span class="gradient-text">Data Science</span>
+                    <br>& ML DL
+                </h1>
+                <p class="hero-subtitle">IIT Madras GUVI Graduate specializing in Machine Learning, Deep Learning, and Data Analytics</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image slide-in-right">
+                <div class="profile-card floating">
+                    <div class="profile-3d">
+                        <canvas id="profile-3d-canvas"></canvas>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Biswajit Modak</h3>
+                        <p>B.Sc in Microbiology, Master in Data Science</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-kaggle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title floating">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Recent graduate from IIT Madras GUVI's Data Science program with expertise in machine learning, deep learning, and statistical analysis. Passionate about solving real-world problems through data-driven insights and innovative AI solutions.</p>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <h4>Data Science Certification</h4>
+                            <p>IIT Madras GUVI | 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>ML Models Deployed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills particle-bg">
+        <div class="container">
+            <h2 class="section-title floating">Technical Skills</h2>
+            <div class="skills-3d-container">
+                <canvas id="skills-3d-canvas"></canvas>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <span>Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>R</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>MySQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML/DL Frameworks</h3>
+                    <div class="skill-item">
+                        <span>TensorFlow</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>PyTorch</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Scikit-learn</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Tools</h3>
+                    <div class="skill-item">
+                        <span>Pandas</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>NumPy</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>PowerBI</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title floating">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=ML+Project" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Model</h3>
+                        <p>Built a machine learning model to predict customer churn with 94% accuracy using ensemble methods.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Live Demo</a>
+                            <a href="#" class="btn-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Deep+Learning" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Computer Vision System</h3>
+                        <p>Developed a CNN-based image classification system for medical diagnosis with 96% accuracy.</p>
+                        <div class="project-tech">
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                            <span>Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Live Demo</a>
+                            <a href="#" class="btn-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/06b6d4/ffffff?text=NLP+Project" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sentiment Analysis Tool</h3>
+                        <p>Created an NLP-based sentiment analysis tool for social media monitoring and brand analysis.</p>
+                        <div class="project-tech">
+                            <span>NLTK</span>
+                            <span>Transformers</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Live Demo</a>
+                            <a href="#" class="btn-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games">
+        <div class="container">
+            <h2 class="section-title floating">Data Science Demos</h2>
+            <p class="games-subtitle">Interactive demonstrations of machine learning and statistics concepts!</p>
+            
+            <div class="games-grid">
+                <!-- Linear Regression Demo -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3><i class="fas fa-chart-line"></i> Linear Regression</h3>
+                        <div class="game-score">R²: <span id="r-squared">0.00</span></div>
+                    </div>
+                    <canvas id="regression-canvas" width="300" height="300"></canvas>
+                    <div class="game-controls">
+                        <button id="clear-points" class="btn btn-primary">Clear Points</button>
+                        <button id="show-line" class="btn btn-secondary">Show Line</button>
+                    </div>
+                    <p class="game-instructions">Click to add data points, see the regression line</p>
+                </div>
+
+                <!-- Classification Demo -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3><i class="fas fa-project-diagram"></i> Classification</h3>
+                        <div class="game-score">Accuracy: <span id="accuracy">0%</span></div>
+                    </div>
+                    <canvas id="classification-canvas" width="300" height="300"></canvas>
+                    <div class="game-controls">
+                        <button id="add-red" class="btn btn-primary">Add Red</button>
+                        <button id="add-blue" class="btn btn-secondary">Add Blue</button>
+                        <button id="classify" class="btn btn-success">Classify</button>
+                    </div>
+                    <p class="game-instructions">Add points, then see classification boundary</p>
+                </div>
+
+                <!-- Statistics Quiz -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3><i class="fas fa-calculator"></i> Stats Quiz</h3>
+                        <div class="game-score">Score: <span id="quiz-score">0/0</span></div>
+                    </div>
+                    <div id="quiz-container">
+                        <div id="question-text">Click Start to begin!</div>
+                        <div id="quiz-options"></div>
+                        <div id="quiz-feedback"></div>
+                    </div>
+                    <div class="game-controls">
+                        <button id="start-quiz" class="btn btn-primary">Start Quiz</button>
+                        <button id="next-question" class="btn btn-secondary" style="display:none">Next</button>
+                    </div>
+                    <p class="game-instructions">Test your statistics knowledge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact particle-bg">
+        <div class="container">
+            <h2 class="section-title floating">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing new opportunities and innovative projects in data science.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>bismath21@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 7890304095</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kolkata, India</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Biswajit Modak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
